@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeasurementApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bt-uz-BmX">
+                                <rect key="frame" x="172" y="220" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="↑"/>
+                                <connections>
+                                    <action selector="TouchTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBK-9a-cVM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzX-1J-3yy">
+                                <rect key="frame" x="305" y="309.5" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="→"/>
+                                <connections>
+                                    <action selector="TouchRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5i-CF-AHx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT2-IR-t6h">
+                                <rect key="frame" x="40" y="309.5" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="←"/>
+                                <connections>
+                                    <action selector="TouchLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YzD-mW-r3b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fn-eb-whA">
+                                <rect key="frame" x="172" y="419" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="↓"/>
+                                <connections>
+                                    <action selector="TouchUnderButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dgn-sa-d90"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6bt-uz-BmX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="3DN-IT-DKG"/>
+                            <constraint firstItem="PT2-IR-t6h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6e3-ba-HyG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9fn-eb-whA" secondAttribute="bottom" constant="200" id="DqM-bB-KHt"/>
+                            <constraint firstItem="FzX-1J-3yy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cDD-OW-GwB"/>
+                            <constraint firstItem="6bt-uz-BmX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="evu-dt-QOv"/>
+                            <constraint firstItem="PT2-IR-t6h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="fGy-bO-SLg"/>
+                            <constraint firstAttribute="trailing" secondItem="FzX-1J-3yy" secondAttribute="trailing" constant="40" id="nuR-Xk-8pl"/>
+                            <constraint firstItem="9fn-eb-whA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yjE-Y8-cWA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftButton" destination="PT2-IR-t6h" id="ZQw-Sl-uE9"/>
+                        <outlet property="rightButton" destination="FzX-1J-3yy" id="cxc-Ud-8dQ"/>
+                        <outlet property="topButton" destination="6bt-uz-BmX" id="Fsk-FP-bMP"/>
+                        <outlet property="underButton" destination="9fn-eb-whA" id="exp-IY-atd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
